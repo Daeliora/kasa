@@ -1,17 +1,30 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 import Home from '../pages/Home/Home.jsx'      
 import About from '../pages/About/About.jsx'    
 import Error from '../pages/Error/Error.jsx'
+import Header from '../components/Header/Header.jsx'
+import Footer from '../components/Footer/Footer.jsx'
+
+import MainLayout from '../layouts/MainLayout';
 
 function AppRouter() {
   return (
     <BrowserRouter>
+    
+      <Header /> {/* <-- Il s'affichera tout en haut de CHAQUE page */}
+      
+      <main>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      </main>
+
+      <Footer /> {/* <-- Il s'affichera tout en bas de CHAQUE page */}
+
     </BrowserRouter>
   )
 }
