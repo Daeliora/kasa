@@ -4,7 +4,7 @@ import logements from '../../data/logements.json'
 import Banner from '../../components/Banner/Banner'
 import Card from '../../components/Card/Card'
 
-/*import bannerImage from '../../assets/banner-home.png'*/
+import bannerImage from '../../assets/banner-home.png'
 
 function Home() {
   return (

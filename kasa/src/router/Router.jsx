@@ -6,8 +6,7 @@ import About from '../pages/About/About.jsx'
 import Error from '../pages/Error/Error.jsx'
 import Header from '../components/Header/Header.jsx'
 import Footer from '../components/Footer/Footer.jsx'
-import Logement from '../components/Logement/Logement.jsx'
-
+import Housing from '../pages/Housing/Housing.jsx'
 import MainLayout from '../layouts/MainLayout';
 
 function AppRouter() {
@@ -21,7 +20,7 @@ function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         {/* Cette route intercepte n'importe quel ID entré après /logement/ */}
-        <Route path="/logement/:id" element={<Logement />} />
+        <Route path="/logement/:id" element={<Housing />} />
         <Route path="*" element={<Error />} />
       </Routes>
       </main>
