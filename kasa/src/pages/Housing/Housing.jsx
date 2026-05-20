@@ -11,7 +11,6 @@ function Logement() {
   // 3. Cas de sécurité : si l'ID dans l'URL ne correspond à aucun logement
   if (!logement) {
     return <p>Logement introuvable ou ID incorrect.</p>
-    // Astuce : Vous pouvez aussi rediriger vers une page 404 ici
   }
 
   // 4. Si le logement existe, on affiche ses informations
