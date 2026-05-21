@@ -1,6 +1,7 @@
 import { useParams, Navigate } from 'react-router-dom'
 import listeLogements from '../../data/logements.json' // données 
 import Slideshow from '../../components/Slideshow/Slideshow'
+import Collapse from '../../components/Collapse'
 
 function Housing() {
   // 1. On extrait le paramètre "id" de l'URL
@@ -17,20 +18,55 @@ function Housing() {
   // 4. Si le logement existe, on affiche ses informations
   return (
     <div className="logement-container">
+      
       <h1>{logement.title}</h1>
       <p>{logement.location}</p>
-      <Slideshow pictures={logement.pictures} alt={logement.title} />
-      <p>{logement.description}</p>
-      
-     
-      <h3>Équipements :</h3>
-      <ul>
-        {logement.equipments.map((equip, index) => (
-          <li key={index}>{equip}</li>
+
+      <div className="housing-tags">
+        {logement.tags.map((tag) => (
+          <span key={tag} className="tag">
+            {tag}
+          </span>
         ))}
-      </ul>
+      </div>
+      <div className="housing-host">
+        <p>{logement.host.name}</p>
+        <img
+          src={logement.host.picture}
+          alt={logement.host.name}
+        />
+      </div>
+
+      <div className="housing-rating">
+        {[1,2,3,4,5].map((star) => (
+          <span key={star}>
+            {star <= logement.rating ? '★' : '☆'}
+          </span>
+        ))}
+      </div>
+
+      <Slideshow pictures={logement.pictures} alt={logement.title} />
+      
+      <div className="housing-collapses">
+        
+        <Collapse title="Description">
+          <p>{logement.description}</p>
+        </Collapse>
+
+        <Collapse title="Équipements">
+          <ul>
+            {logement.equipments.map((equipment) => (
+              <li key={equipment}>
+                {equipment}
+              </li>
+            ))}
+          </ul>
+
+        </Collapse>
+      </div>
+
     </div>
-  );
+  )
 }
 
 export default Housing

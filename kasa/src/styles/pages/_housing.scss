@@ -1,0 +1,41 @@
+.housing {
+  padding: 20px;
+
+  color: #ff6060;
+}
+
+.housing-tags {
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  padding: 5px 20px;
+
+  border-radius: 10px;
+
+  background: #ff6060;
+  color: white;
+}
+
+.housing-host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  img {
+    width: 64px;
+    height: 64px;
+
+    border-radius: 50%;
+  }
+}
+
+.housing-collapses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 40px;
+
+  margin-top: 30px;
+}
