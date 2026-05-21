@@ -1,7 +1,8 @@
-import { useParams } from 'react-router-dom'
-import listeLogements from '../../data/logements.json' // données (chemin à adapter)
+import { useParams, Navigate } from 'react-router-dom'
+import listeLogements from '../../data/logements.json' // données 
+import Slideshow from '../../components/Slideshow/Slideshow'
 
-function Logement() {
+function Housing() {
   // 1. On extrait le paramètre "id" de l'URL
   const { id } = useParams()
 
@@ -10,7 +11,7 @@ function Logement() {
 
   // 3. Cas de sécurité : si l'ID dans l'URL ne correspond à aucun logement
   if (!logement) {
-    return <p>Logement introuvable ou ID incorrect.</p>
+     return <Navigate to="./error" />
   }
 
   // 4. Si le logement existe, on affiche ses informations
@@ -18,7 +19,7 @@ function Logement() {
     <div className="logement-container">
       <h1>{logement.title}</h1>
       <p>{logement.location}</p>
-      <img src={logement.cover} alt={logement.title} />
+      <Slideshow pictures={logement.pictures} alt={logement.title} />
       <p>{logement.description}</p>
       
      
@@ -32,4 +33,4 @@ function Logement() {
   );
 }
 
-export default Logement
+export default Housing

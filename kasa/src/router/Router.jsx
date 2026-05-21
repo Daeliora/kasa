@@ -7,28 +7,27 @@ import Error from '../pages/Error/Error.jsx'
 import Header from '../components/Header/Header.jsx'
 import Footer from '../components/Footer/Footer.jsx'
 import Housing from '../pages/Housing/Housing.jsx'
-import MainLayout from '../layouts/MainLayout';
+import MainLayout from '../layouts/MainLayout'
 
 function AppRouter() {
   return (
     <BrowserRouter>
     
-      <Header /> {/* <-- Il s'affichera tout en haut de CHAQUE page */}
+      <Header />
       
       <main>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        {/* Cette route intercepte n'importe quel ID entré après /logement/ */}
-        <Route path="/logement/:id" element={<Housing />} />
+        <Route path="/housing/:id" element={<Housing />} />
         <Route path="*" element={<Error />} />
       </Routes>
       </main>
 
-      <Footer /> {/* <-- Il s'affichera tout en bas de CHAQUE page */}
+      <Footer /> 
 
     </BrowserRouter>
   )
 }
 
-export default AppRouter;
+export default AppRouter
