@@ -1,32 +1,25 @@
 .collapse {
-  margin-bottom: 20px;
-
+  margin-bottom: 30px;
   border-radius: 10px;
   overflow: hidden;
 }
 
 .collapse-header {
   width: 100%;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 15px;
-
   border: none;
-
   background: #ff6060;
   color: white;
-
   cursor: pointer;
+  font-size: 24px;
 }
 
 .collapse-content {
   padding: 20px;
-
   background: #f6f6f6;
-
   animation: collapseAnimation 0.3s ease;
 }
 
@@ -39,5 +32,16 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .collapse {
+  margin-bottom: 20px;
+}
+  
+  .collapse-header {
+    font-size: 13px;
+    padding: 15px;
   }
 }

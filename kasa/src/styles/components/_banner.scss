@@ -11,6 +11,7 @@
     height: 100%;
 
     object-fit: cover;
+    object-position: center;
 
     filter: brightness(70%);
   }
@@ -34,8 +35,7 @@
 
   .banner {
     height: 111px;
-    width: 92%;
-    margin-left: 15px;
+    width: 100%;
     border-radius: 10px;
     margin-bottom: 5px;
 
