@@ -1,5 +1,32 @@
 @import './components/card.scss';
 @import './pages/home.scss';
 @import './pages/housing.scss';
-@import './components/slideshow';
-@import './components/collapse';
+@import './pages/about.scss';
+@import './pages/error.scss';
+@import './components/slideshow.scss';
+@import './components/collapse.scss';
+@import './components/header.scss';
+@import './components/footer.scss';
+@import './components/banner.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  font-family: Montserrat, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}

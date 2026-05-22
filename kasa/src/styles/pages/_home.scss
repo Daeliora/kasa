@@ -1,23 +1,24 @@
 .cards-container {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 40px;
-
   padding: 50px;
-
   border-radius: 25px;
-
   background: #f6f6f6;
+}
+
+.home {
+  width: 100%;
+  max-width: 1240px;
+
+  margin: auto;
 }
 
 @media (max-width: 768px) {
   .cards-container {
     grid-template-columns: 1fr;
-
-    padding: 0;
-
+    padding: 15px;
     background: transparent;
+    gap: 15px;
   }
 }

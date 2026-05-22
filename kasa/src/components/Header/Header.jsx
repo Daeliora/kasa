@@ -7,8 +7,18 @@ function Header() {
     <header className="kasa-header">
       <img src={logo} alt="Kasa" className="kasa-logo" />
       <nav className="kasa-nav">
-        <NavLink to="/">Accueil</NavLink>
-        <NavLink to="/about">À propos</NavLink>
+        <NavLink to="/"
+          className={({ isActive }) =>
+          isActive ? 'active-link' : ''
+          }>
+        Accueil
+        </NavLink>
+        <NavLink to="/about"
+          className={({ isActive }) =>
+          isActive ? 'active-link' : ''
+        }>
+        À propos
+        </NavLink>
       </nav>
     </header>
   )

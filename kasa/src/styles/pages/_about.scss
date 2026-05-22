@@ -1,0 +1,20 @@
+.about {
+  width: 100%;
+  max-width: 1240px;
+
+  margin: auto;
+}
+
+.about-collapse {
+  width: 80%;
+
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+
+  .about-collapse {
+    width: 100%;
+  }
+
+}

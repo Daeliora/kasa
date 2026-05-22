@@ -1,0 +1,44 @@
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 100px;
+
+  margin: 100px 0;
+
+  color: #ff6060;
+
+  h1 {
+    font-size: 288px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 36px;
+  }
+
+  a {
+    color: black;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .error-page {
+
+    h1 {
+      font-size: 96px;
+    }
+
+    p {
+      width: 260px;
+
+      text-align: center;
+
+      font-size: 18px;
+    }
+
+  }
+
+}
