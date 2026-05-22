@@ -39,3 +39,15 @@
 
   margin-top: 30px;
 }
+
+@media (max-width: 768px) {
+
+  .housing-collapses {
+    grid-template-columns: 1fr;
+  }
+
+  .housing-host {
+    justify-content: space-between;
+  }
+
+}

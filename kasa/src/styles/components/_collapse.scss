@@ -1,0 +1,43 @@
+.collapse {
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.collapse-header {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px;
+
+  border: none;
+
+  background: #ff6060;
+  color: white;
+
+  cursor: pointer;
+}
+
+.collapse-content {
+  padding: 20px;
+
+  background: #f6f6f6;
+
+  animation: collapseAnimation 0.3s ease;
+}
+
+@keyframes collapseAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
