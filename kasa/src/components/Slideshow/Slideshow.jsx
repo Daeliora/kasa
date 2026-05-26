@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import leftArrow from '../../assets/chevron_left.png'
+import rightArrow from '../../assets/chevron_right.png'
 
 function Slideshow({ pictures }) {
 
@@ -31,11 +33,11 @@ function Slideshow({ pictures }) {
       {pictures.length > 1 && (
         <>
           <button onClick={prevSlide}>
-            ←
+             <img src={leftArrow} alt="précédent" />
           </button>
 
           <button onClick={nextSlide}>
-            →
+            <img src={rightArrow} alt="suivant" />
           </button>
 
           <p>

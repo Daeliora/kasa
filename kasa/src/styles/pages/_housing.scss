@@ -1,46 +1,65 @@
-.housing {
-  padding: 20px;
+main {
+  margin : 0 150px;
+}
 
+h1 {
   color: #ff6060;
+  font : 550 36px Montserrat, sans-serif;
+  line-height: 143%;
+  padding : 40px 0 5px 0;
+}
+
+p {
+  font : 500 18px Montserrat, sans-serif;
+  line-height: 143%;
 }
 
 .housing-tags {
   display: flex;
-  gap: 10px;
+  gap: 15px;
 }
 
 .tag {
   padding: 5px 20px;
-
   border-radius: 10px;
-
   background: #ff6060;
   color: white;
+  font : 700 14px Montserrat, bold, sans-serif;
+  margin : 30px 0 0 0;
 }
 
 .housing-host {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: #ff6060;
 
   img {
     width: 64px;
     height: 64px;
-
     border-radius: 50%;
   }
+}
+
+.housing-rating {
+  display: flex;
+  gap: 5px;
+  color: #ff6060;
+  font-size: 36px;
 }
 
 .housing-collapses {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   gap: 40px;
-
   margin-top: 30px;
 }
 
 @media (max-width: 768px) {
+
+  main {
+  margin : 0 10px;
+}
 
   .housing-collapses {
     grid-template-columns: 1fr;

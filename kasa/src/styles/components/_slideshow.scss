@@ -1,31 +1,24 @@
 .slideshow {
   position: relative;
-
   width: 100%;
   height: 415px;
-
   border-radius: 25px;
   overflow: hidden;
 
   img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
   }
 
   button {
     position: absolute;
     top: 50%;
-
     transform: translateY(-50%);
-
     border: none;
     background: transparent;
-
     color: white;
-    font-size: 60px;
-
+    height: 80px;
     cursor: pointer;
   }
 
@@ -39,12 +32,9 @@
 
   p {
     position: absolute;
-
     bottom: 20px;
     left: 50%;
-
     transform: translateX(-50%);
-
     color: white;
   }
 }
@@ -55,7 +45,7 @@
     height: 255px;
 
     button {
-      font-size: 30px;
+      height: 24px;
     }
   }
 

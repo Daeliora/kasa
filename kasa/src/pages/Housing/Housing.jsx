@@ -2,22 +2,26 @@ import { useParams, Navigate } from 'react-router-dom'
 import listeLogements from '../../data/logements.json' // données 
 import Slideshow from '../../components/Slideshow/Slideshow'
 import Collapse from '../../components/Collapse'
+import '../../styles/pages/_housing.scss'
+
 
 function Housing() {
-  // 1. On extrait le paramètre "id" de l'URL
+  // extrait le paramètre "id" de l'URL
   const { id } = useParams()
 
-  // 2. On cherche le logement qui possède cet ID précis
+  // cherche le logement qui possède cet ID précis
   const logement = listeLogements.find((item) => item.id === id)
 
-  // 3. Cas de sécurité : si l'ID dans l'URL ne correspond à aucun logement
+  // Cas de sécurité : si l'ID dans l'URL ne correspond à aucun logement
   if (!logement) {
      return <Navigate to="./error" />
   }
 
-  // 4. Si le logement existe, on affiche ses informations
+  // Si le logement existe, on affiche ses informations
   return (
     <div className="logement-container">
+
+      <Slideshow pictures={logement.pictures} alt={logement.title} />
       
       <h1>{logement.title}</h1>
       <p>{logement.location}</p>
@@ -45,7 +49,7 @@ function Housing() {
         ))}
       </div>
 
-      <Slideshow pictures={logement.pictures} alt={logement.title} />
+      
       
       <div className="housing-collapses">
         
