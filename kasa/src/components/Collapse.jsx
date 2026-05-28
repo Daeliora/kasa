@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import chevron from '../assets/chevron_menu.png'
 
 function Collapse({ title, children }) {
 
@@ -13,9 +14,11 @@ function Collapse({ title, children }) {
       >
         <span>{title}</span>
 
-        <span>
-          {isOpen ? '▲' : '▼'}
-        </span>
+        <img
+          src={chevron}
+          alt="chevron"
+          className={isOpen ? 'open' : ''}
+        />
       </button>
 
       {isOpen && (

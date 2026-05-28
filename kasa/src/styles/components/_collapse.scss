@@ -2,9 +2,8 @@
   margin-bottom: 30px;
   border-radius: 10px;
   overflow: hidden;
-}
 
-.collapse-header {
+  .collapse-header {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -15,33 +14,31 @@
   color: white;
   cursor: pointer;
   font-size: 24px;
-}
+  }
 
-.collapse-content {
+  .collapse-content {
   padding: 20px;
   background: #f6f6f6;
-  animation: collapseAnimation 0.3s ease;
-}
-
-@keyframes collapseAnimation {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  img {
+      width: 18px;
+      transition: transform 0.3s ease;
+      transform: rotate(0deg);
+    }
+    .open {
+      transform: rotate(-180deg);
   }
-}
 
-@media (max-width: 768px) {
+
+  @media (max-width: 768px) {
   .collapse {
   margin-bottom: 20px;
-}
+  }
   
   .collapse-header {
     font-size: 13px;
     padding: 15px;
+  }
   }
 }
