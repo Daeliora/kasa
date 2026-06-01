@@ -23,34 +23,49 @@ function Housing() {
 
       <Slideshow pictures={logement.pictures} alt={logement.title} />
       
-      <h1>{logement.title}</h1>
-      <p>{logement.location}</p>
+      <div className="housing-infos">
 
-      <div className="housing-tags">
-        {logement.tags.map((tag) => (
-          <span key={tag} className="tag">
-            {tag}
-          </span>
-        ))}
-      </div>
-      <div className="housing-host">
-        <p>{logement.host.name}</p>
-        <img
-          src={logement.host.picture}
-          alt={logement.host.name}
-        />
-      </div>
+        <div className="housing-left">
 
-      <div className="housing-rating">
-        {[1,2,3,4,5].map((star) => (
-          <span key={star}>
-            {star <= logement.rating ? '★' : '☆'}
-          </span>
-        ))}
-      </div>
+          <h1>{logement.title}</h1>
+          <p>{logement.location}</p>
 
-      
-      
+          <div className="housing-tags">
+            {logement.tags.map((tag) => (
+              <span key={tag} className="tag">
+               {tag}
+              </span>
+            ))}
+          </div>
+
+        </div>
+
+        <div className="housing-right">
+
+          <div className="housing-host">
+            <p>{logement.host.name}</p>
+
+            <img
+              src={logement.host.picture}
+              alt={logement.host.name}
+            />
+          </div>
+
+          <div className="housing-rating">
+            {[1,2,3,4,5].map((star) => (
+              <span
+                key={star}
+                className={star <= logement.rating ? "star active" : "star"}
+              >
+                ★
+              </span>
+            ))}
+          </div>
+
+        </div>
+
+      </div>
+            
       <div className="housing-collapses">
         
         <Collapse title="Description">
