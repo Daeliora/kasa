@@ -3,6 +3,8 @@ import listeLogements from '../../data/logements.json' // données
 import Slideshow from '../../components/Slideshow/Slideshow'
 import Collapse from '../../components/Collapse'
 import '../../styles/pages/_housing.scss'
+import starActive from '../../assets/star-active.png'
+import starInactive from '../../assets/star-inactive.png'
 
 
 function Housing() {
@@ -53,12 +55,12 @@ function Housing() {
 
           <div className="housing-rating">
             {[1,2,3,4,5].map((star) => (
-              <span
+              <img
                 key={star}
-                className={star <= logement.rating ? "star active" : "star"}
-              >
-                ★
-              </span>
+                src={star <= logement.rating ? starActive : starInactive}
+                alt="étoile"
+                className="star"
+              />
             ))}
           </div>
 
@@ -73,7 +75,7 @@ function Housing() {
         </Collapse>
 
         <Collapse title="Équipements">
-          <ul>
+          <ul className="equipment-list">
             {logement.equipments.map((equipment) => (
               <li key={equipment}>
                 {equipment}

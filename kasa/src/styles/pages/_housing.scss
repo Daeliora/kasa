@@ -56,15 +56,16 @@ p {
 
 .housing-rating {
   display: flex;
-  gap: 10px;
+  gap: 15px;
 
-.star {
-  font-size: 36px;
-  color: #E3E3E3;
-}
-.star.active {
-  color: #FF6060;
-}
+  .star {
+    width: 25px;
+    height: 24px;
+    color: #E3E3E3;
+  }
+  .star.active {
+    color: #FF6060;
+  }
 }
 
 .housing-collapses {
@@ -72,6 +73,11 @@ p {
   gap: 50px;
 
   margin-top: 30px;
+
+  .equipment-list li {
+  list-style: none;
+  font : 500 18px Montserrat, sans-serif;
+}
 }
 
 .housing-collapses > * {
@@ -142,15 +148,16 @@ p {
 
  .housing-rating {
   display: flex;
-  gap: 10px;
+  gap: 8px;
 
-.star {
-  font-size: 20px;
-  color: #E3E3E3;
-}
-.star.active {
-  color: #FF6060;
-}
+  .star {
+    width: 15px;
+    height: 14px;
+    color: #E3E3E3;
+  }
+  .star.active {
+    color: #FF6060;
+  }
 }
 
 .tag {
@@ -170,6 +177,10 @@ p {
     flex-direction: column;
     gap: 0px;
     margin-bottom: -50px;
+
+    .equipment-list li {
+    font-size: 14px;
+  }
   }
 
   .housing-collapses .collapse {
