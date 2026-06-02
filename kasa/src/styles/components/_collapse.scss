@@ -10,7 +10,7 @@
   align-items: center;
   padding: 15px;
   border: none;
-  background: #ff6060;
+  background: $primary-color;
   color: white;
   cursor: pointer;
   font-size: 24px;
@@ -18,7 +18,7 @@
 
   .collapse-content {
   padding: 20px;
-  background: #f6f6f6;
+  background: $background-color;
   }
 
   img {
