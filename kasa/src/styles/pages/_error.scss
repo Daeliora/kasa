@@ -3,12 +3,13 @@
   flex-direction: column;
   align-items: center;
   gap: 100px;
-  margin: 100px 0;
+  margin: 0 0 100px 0;
   color: #ff6060;
 
   h1 {
     font-size: 288px;
     font-weight: 700;
+    margin-bottom: -50px;
   }
 
   p {
@@ -23,10 +24,11 @@
 @media (max-width: 768px) {
 
   .error-page {
-    margin: 100px 0 25px;
+    margin: 20px 0 35px 0;
     
     h1 {
       font-size: 96px;
+      margin-bottom: -30px;
     }
 
     p {
