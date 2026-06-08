@@ -2,6 +2,9 @@
   margin-bottom: 22px;
   border-radius: 5px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 
   .collapse-header {
   width: 100%;
@@ -19,6 +22,7 @@
   .collapse-content {
   padding: 10px 10px;
   background: $background-color;
+  flex: 1;
   }
 
   img {
